@@ -1,4 +1,4 @@
-#Basics:
+# Basics:
 ```cpp
 #include <iostream>
 int main(){
@@ -9,7 +9,7 @@ int main(){
     return 0;
 }
 ```
-#Variables:
+# Variables:
 ```cpp
 #include <iostream>
 int main(){
@@ -26,7 +26,7 @@ int main(){
     return 0;
 }
 ```
-#Types:
+# Types:
 ```cpp
 #include <iostream>
 int main(){
@@ -49,7 +49,7 @@ int main(){
     return 0;
 }
 ```
-#Text with variables:
+# Text with variables:
 ```cpp
 #include <iostream>
 int main(){
