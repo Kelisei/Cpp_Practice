@@ -1,7 +1,10 @@
 #include <iostream>
 int main(){
-    std::string name = "Goku";
-    std::cout << "Hello " << name;
+    const double PI = 3.14159;
+    double radius = 10;
+    double circumference = 2 * PI * radius;
+
+    std::cout << circumference << "cm";
 
     return 0;
 }
