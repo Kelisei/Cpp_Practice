@@ -145,14 +145,11 @@ int main (){
     //!They're + - * /
     int students = 20;
 
-    students = students + 1;
-
+    students = students + 1; //This will yield 21
     std::cout << students;
 
     //!You could also us the shorthand:
-
     students+=2; 
-
     //!Or if you will only add 1, use:
     students++;
 
