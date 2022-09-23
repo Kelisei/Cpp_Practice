@@ -1,23 +1,31 @@
 #include <iostream>
-// we know cout << is the insertion operator
+#include <cmath>
 int main (){
-    std::string name;
+    //The first useful math function is max:
+    double x;
+    double y;
+    
+    std::cout << "Introduce a value for x" << '\n';
+    std::cin >> x;
+    std::cout << "Introduce a value for y" << '\n';
+    std::cin >> y;
 
-    std::cout << "What's your name?: ";
-    //cin >> is the extraction operator, for reading
-    std::cin >> name;
+    double z = std::max(x, y);
+    std::cout << "The maximum beetween " << y << " and " << x << " is " << z;
+    //Theres also min:
+    double p = std::min(x, y);
+    std::cout << "The minimum beetween " << y << " and " << x << " is " << p;
+    //---------------
+    //Now to use the rest of the functions are within the cmath file
+    //We have to include it in the top
 
-    std::cout << "Your name is " << name;
+    z = pow(2, 4); //Powers the first to the second
+    z = sqrt(9); //Square rot of the number
+    z = abs(-3); //How far is the number of zero
+    z = round(x); //Rounds the number
+    z = ceill(x); //Rounds up the number
+    z = floor(x); //Rounds down
 
-    //Now, if you wanted to read a sentence with spaces in it you will use the getline function:
-    std::cout << '\n' << "What's your full name?: ";
-
-    std::getline(std::cin >> std::ws, name); //Getline reads everything in the line!
-
-    std::cout << "Your full name is " << name << '\n'; 
+    //Search at cplusplus.com/reference/cmath/ to find more
     return 0;
 }
-    /*std::ws
-    Cin leaves a new line caracter \n at the end of the stream buffer (where we read), then getline pics it out and bugs itself
-    so we use std::ws to ignore it!
-    */
