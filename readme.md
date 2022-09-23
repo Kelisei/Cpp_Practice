@@ -88,7 +88,8 @@ int main(){
     int x = 0;
     std::cout << x; //!If we don't specify, it will use the local name
 
-    std::cout << first::x;//! The "::" are known as the scope resolution operator, it says which namespace will be referring.
+    std::cout << first::x;//! The "::" are known as the scope resolution operator, 
+    //it says which namespace will be referring.
 
     return 0;
 }
@@ -105,5 +106,4 @@ int main(){
 
     return 0;
 }
-
 ```
