@@ -1,36 +1,25 @@
 #include <iostream>
 
 int main (){
-    //!There are certain arithmetic operators in c++,
-    //!They're + - * /
-    int students = 20;
+    //!Type conversion, converting a value of one type of data to another
+    //!Implicit--->Automatic | Explicit--->Precede value with new data type
+    int x = 3.14;
+    std::cout << x;//!--->It truncates the value to 3
 
-    students = students + 1;
+    int y = (int) 3.14;//!---> We force 3.14 to be integer before printing it. 
+    std::cout << y;//!Thus we print 3 again
 
-    std::cout << students;
+    char z = 100;//!---> This will convert this value in ascii ("d")
+    std::cout << z;//!Prints d
+    //!also:
+    std::cout << (char) 100;//!Prints d
 
-    //!You could also us the shorthand:
-
-    students+=2; 
-
-    //!Or if you will only add 1, use:
-    students++;
-
-    //!Minus
-    students = students-1;
-    students-=2;
-    students--;
-    //!Multiplication
-    students = students*2;
-    students*=2;
-    //!Division
-    students = students/2;
-    students /= 2;
-
-    //!Also for the leftover of the int division we use %:
-    int remainder = students % 2;
-
-    //!Obvisuly we revolsve first parenthesis, then multiplicaction n' division
-    //!And then addition and substraction
+    //!for example, if we where to divide by two integers,
+    //!to get a percentage we would need to cast the divider to double:
+    int correct = 8;
+    int questions = 10;
+    double score = correct/(double)questions * 100; //!If otherwise we don't cast it as a double, it would be integer division, yielding 0.
+    std::cout << score << "%"; //!Prints 80%
+    
     return 0;
 }
