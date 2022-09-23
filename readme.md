@@ -59,3 +59,51 @@ int main(){
     return 0;
 }
 ```
+# Constants:
+```cpp
+#include <iostream>
+int main(){
+    //!Constant obviously don't change in the program, and they also named all in caps.
+    const double PI = 3.14159;
+
+    double radius = 10;
+    double circumference = 2 * PI * radius;
+    
+    std::cout << circumference << "cm";
+    return 0;
+}
+```
+# Namespaces:
+```cpp
+#include <iostream>
+    //!Namespaces: A way so two or more entities may have the same name
+namespace first {
+    int x = 1;
+}
+namespace second {
+    int x = 2;
+}
+int main(){
+
+    int x = 0;
+    std::cout << x; //!If we don't specify, it will use the local name
+
+    std::cout << first::x;//! The "::" are known as the scope resolution operator, it says which namespace will be referring.
+
+    return 0;
+}
+```
+```cpp
+#include <iostream>
+namespace first {
+    int x = 1;
+}
+int main(){
+    using namespace first; //!Now it will asume that we are always using the entity found within first!
+
+    std::cout << x; 
+
+    return 0;
+}
+
+```

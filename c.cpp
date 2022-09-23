@@ -1,9 +1,11 @@
 #include <iostream>
+namespace first {
+    int x = 1;
+}
 int main(){
-    //!Constant obviously don't change in the program, and they also named all in caps.
-    const double PI = 3.14159;
-    double radius = 10;
-    double circumference = 2 * PI * radius;
-    std::cout << circumference << "cm";
+    using namespace first; //!Now it will asume that we are always using the entity found within first!
+
+    std::cout << x; 
+
     return 0;
 }
