@@ -107,3 +107,32 @@ int main(){
     return 0;
 }
 ```
+# typedef and using:
+```cpp
+#include <iostream>
+#include <vector>
+
+//!Typedef are used to give "nicknames" to data 
+//!types, for example those with very long names or non descriptive:
+typedef std::string text_t;
+//!_t this if for implying that's a type
+int main(){
+    //!Now we use the new identifier
+    text_t firstName = "Goku";
+    
+    std::cout << firstName;
+    return 0;
+}
+```
+```cpp
+#include <iostream>
+#include <vector>
+//!typedef has been largely replaced by the using keyword (it's more suitable for templates):
+using text_t = std::string;
+int main(){
+    //!Now we use the new identifier
+    text_t firstName = "Goku";
+    
+    std::cout << firstName;
+    return 0;
+```

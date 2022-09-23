@@ -1,11 +1,12 @@
 #include <iostream>
-namespace first {
-    int x = 1;
-}
+#include <vector>
+
+//!typedef has been largely replaced by the using keyword (it's more suitable for templates):
+using text_t = std::string;
 int main(){
-    using namespace first; //!Now it will asume that we are always using the entity found within first!
-
-    std::cout << x; 
-
+    //!Now we use the new identifier
+    text_t firstName = "Goku";
+    
+    std::cout << firstName;
     return 0;
 }
