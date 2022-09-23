@@ -7,6 +7,7 @@ int main(){
     //!====With backlash n you say that you are ending the line there====
     std::cout << "I like milanesa!" << '\n';
     return 0;
+    //!===Also << is known as the insertion operator===
 }
 ```
 # Variables:
@@ -194,7 +195,8 @@ int main (){
     //!to get a percentage we would need to cast the divider to double:
     int correct = 8;
     int questions = 10;
-    double score = correct/(double)questions * 100; //!If otherwise we don't cast it as a double, it would be integer division, yielding 0.
+    double score = correct/(double)questions * 100; //!If otherwise we don't cast it as a double, 
+    //it would be integer division, yielding 0.
     std::cout << score << "%"; //!Prints 80%
     
     return 0;
