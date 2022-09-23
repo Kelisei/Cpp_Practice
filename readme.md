@@ -280,6 +280,10 @@ int main(){
     }
     return 0;
 }
+    /*Logical operators: &&, ||, !
+    && = and, || = or, ! = inversion
+    */
+    
 ```
 # Switches:
 ```cpp
