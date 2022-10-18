@@ -341,7 +341,7 @@ Figure = Circle;
 switch (Figure) {
     case Square: cout << "Something specific for Squares"; break;
     case Triangle: cout << "Something specific for Triangles"; break;
-    case Circle: cout << "Something specific for Circles"; break;
+    case Circle: cout << "Something specific for Circles" << endl; break;
     default: cout << "No implementation for that"; break;
 }
     //When printing it will print it's numeric value
