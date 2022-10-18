@@ -345,7 +345,7 @@ switch (Figure) {
     default: cout << "No implementation for that"; break;
 }
     //When printing it will print it's numeric value
-    cout << endl<< endl << "Index of Square: " << Square << endl;
+    cout << "Index of Square: " << Square << endl;
     cout << "Index of Triangle: " << Triangle << endl;
     cout << "Index of Circle: " << Circle << endl;
 return 0;
