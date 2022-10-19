@@ -1,23 +1,14 @@
 #include <iostream>
 #include <ctime>
 
+void happyBirthday(std::string name);
 int main()
 {
-    srand(time(0));
-    int randNum=(rand() % 5) +1;
-    
-    switch (randNum)
+    happyBirthday("Goku");
+}
+void happyBirthday(std::string name){
+    for (int i = 0; i < 50; i++)
     {
-    case 1: std::cout << "You win a Car";
-        break;
-    case 2: std::cout << "You win a Plane";
-        break;
-    case 3: std::cout << "You win a Bike";
-        break;
-    case 4: std::cout << "You win a Tricicle";
-        break;
-    case 5: std::cout << "You win a Boat";
-        break;    
+        std::cout<< "Happy Birthday to " << name << "\n";
     }
-    return 0;
 }

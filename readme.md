@@ -520,3 +520,51 @@ int main()
     return 0;
 }
 ```
+# Functions:
+```cpp
+#include <iostream>
+#include <ctime>
+
+void happyBirthday(){
+    for (int i = 0; i < 50; i++)
+    {
+        std::cout<< "Happy Birthday to you\n";
+    }
+}
+int main()
+{
+    happyBirthday();
+}
+```
+```cpp
+#include <iostream>
+#include <ctime>
+
+void happyBirthday();
+int main()
+{
+    happyBirthday();
+}
+void happyBirthday(){
+    for (int i = 0; i < 50; i++)
+    {
+        std::cout<< "Happy Birthday to you\n";
+    }
+}
+```
+```cpp
+#include <iostream>
+#include <ctime>
+
+void happyBirthday(std::string name);
+int main()
+{
+    happyBirthday("Goku");
+}
+void happyBirthday(std::string name){
+    for (int i = 0; i < 50; i++)
+    {
+        std::cout<< "Happy Birthday to " << name << "\n";
+    }
+}
+```
