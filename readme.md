@@ -351,7 +351,7 @@ switch (Figure) {
 return 0;
 }
 ```
-# Useful Strinm Methods:
+# Useful String Methods:
 ```cpp
 #include <iostream>
 #include <string>
