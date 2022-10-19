@@ -1,19 +1,23 @@
 #include <iostream>
-#include <string>
+#include <ctime>
+
 int main()
 {
-    int number;
-    /* Since we haven't assinged a value to number, it's zero, so it will never enter the while
-    while(number < 0){
-        std::cout << "Enter a positive number:";
-        std::cin >> number;
-    }*/
-
-    //Do while runs the code at least once:
-    do {
-        std::cout << "Enter a positive number:";
-        std::cin >> number;
-    }while(number < 0);
-
-    std::cout << "The number is: " << number;
+    srand(time(0));
+    int randNum=(rand() % 5) +1;
+    
+    switch (randNum)
+    {
+    case 1: std::cout << "You win a Car";
+        break;
+    case 2: std::cout << "You win a Plane";
+        break;
+    case 3: std::cout << "You win a Bike";
+        break;
+    case 4: std::cout << "You win a Tricicle";
+        break;
+    case 5: std::cout << "You win a Boat";
+        break;    
+    }
+    return 0;
 }

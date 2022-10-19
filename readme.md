@@ -439,3 +439,84 @@ int main()
     std::cout << "The number is: " << number;
 }
 ```
+# For loops:
+```cpp
+#include <iostream>
+#include <string>
+int main()
+{
+    //For repeats a set amount of times a block of code
+    for(int i = 1; i <= 3; i++){
+        std::cout << "HAPPY HOLIDAYS " << std::endl;
+    }
+    return 0;
+}
+```
+# Break and continue:
+```cpp
+#include <iostream>
+#include <string>
+int main()
+{
+    //break if for breaking out of a loop, continue if for skipping the current iteration
+    for(int i = 0; i <= 20; i++){
+        if(i == 13){
+            break;
+        }
+        std::cout << i << std::endl;
+    }
+    for(int i = 0; i <= 20; i++){
+        if(i == 13){
+            continue;
+        }
+        std::cout << i << std::endl;
+    }
+    return 0;
+}
+```
+# Pseudo-RNG:
+```cpp
+#include <iostream>
+#include <ctime>
+
+int main()
+{
+    //Pseudo random number generator:
+    srand(time(NULL)); //-->Normally generators use time to "seed" the generator
+
+    int num = rand();
+    for (int i = 0; i < 50; i++)
+    {
+        std::cout << num << std::endl;
+        num = (rand() % 6) + 1; 
+        //For limiting the range of generation we use the MOD
+        //+1 it's so it does not include 0, and it includes the MOD operator
+    }
+    return 0;
+}
+```
+```cpp
+#include <iostream>
+#include <ctime>
+
+int main()
+{
+    srand(time(0));
+    int randNum=(rand() % 5) +1;
+    
+    switch (randNum)
+    {
+    case 1: std::cout << "You win a Car";
+        break;
+    case 2: std::cout << "You win a Plane";
+        break;
+    case 3: std::cout << "You win a Bike";
+        break;
+    case 4: std::cout << "You win a Tricicle";
+        break;
+    case 5: std::cout << "You win a Boat";
+        break;    
+    }
+    return 0;
+}
+```
