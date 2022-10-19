@@ -401,3 +401,41 @@ int main()
     return 0;
 }
 ```
+# While:
+```cpp
+#include <iostream>
+#include <string>
+int main()
+{
+    std::string name;
+    //Repeats a block of code until the condition is false, if the loop is infinite you'll have a problem
+    while(name.empty()){
+        std::cout << "Enter your name :";
+        std::getline(std::cin, name);
+    }
+    std::cout << "Hello " << name;
+    return 0;
+}
+```
+# Do while:
+```cpp
+#include <iostream>
+#include <string>
+int main()
+{
+    int number;
+    /* Since we haven't assinged a value to number, it's zero, so it will never enter the while
+    while(number < 0){
+        std::cout << "Enter a positive number:";
+        std::cin >> number;
+    }*/
+
+    //Do while runs the code at least once:
+    do {
+        std::cout << "Enter a positive number:";
+        std::cin >> number;
+    }while(number < 0);
+
+    std::cout << "The number is: " << number;
+}
+```
