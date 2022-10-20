@@ -1,14 +1,19 @@
 #include <iostream>
 #include <ctime>
 
-void happyBirthday(std::string name);
+int mul(int x, int y);
 int main()
 {
-    happyBirthday("Goku");
+    int num1 = 3;
+    int num2 = 4;
+    std::cout << mul(num1, num2);
+    
 }
-void happyBirthday(std::string name){
-    for (int i = 0; i < 50; i++)
+int mul(int x, int y){
+    int aux = 0;
+    for (int i = 0; i < y; i++)
     {
-        std::cout<< "Happy Birthday to " << name << "\n";
+        aux+=x;
     }
+    return aux;
 }
