@@ -1,19 +1,16 @@
 #include <iostream>
-#include <ctime>
 
-int mul(int x, int y);
 int main()
-{
-    int num1 = 3;
-    int num2 = 4;
-    std::cout << mul(num1, num2);
-    
-}
-int mul(int x, int y){
-    int aux = 0;
-    for (int i = 0; i < y; i++)
-    {
-        aux+=x;
+{   
+    std::string students [] = {"Spongebob", "Patrick", "Squidward"};
+
+    //A way of iterating over an array is with size of and the calculation
+    for(int i = 0; i < sizeof(students)/sizeof(std::string); i++){
+        std::cout << students[i] << "\n";
     }
-    return aux;
+    //Tho we can use a simpler structure, called foreach, it's slower but simpler so you don't really care. Also is less flexible
+    for(std::string student: students){
+        std::cout << student << "\n";
+    }
+    
 }

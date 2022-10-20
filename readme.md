@@ -581,3 +581,101 @@ int mul(int x, int y){
     return aux;
 }
 ```
+# Overloading functions:
+```cpp
+#include <iostream>
+
+double area(double side);
+double area(double height, double base);
+int main()
+{
+    double side = 2.42;
+    double height = 10.23;
+    double base  = 1.34;
+
+    std::cout << area(side) << "\n";
+    std::cout << area(height, base) << "\n";
+    
+}
+double area (double side){
+    return side*side;
+}
+double area(double height, double base){
+    double aux= height*base;
+    return height*base;
+}
+```
+# Arrays:
+```cpp
+#include <iostream>
+
+int main()
+{   
+    //To declare an array, we use [] and {} for the elements
+    std::string cars[] = {"Corvette", "Mustang", "Camry"};
+    std::cout << cars << "\n"; //--This will print the memory space
+
+    cars[2] = "Mustang";
+    for (int i = 0; i < 3; i++)
+    {
+        std::cout << cars[i] << "\n";
+    }
+    
+    //We can declare the array, and the size, afterwars we assing the values:
+
+    double prices[3];
+    for (int i = 0; i < 3; i++)
+    {
+       prices[i]=i;
+    }
+    for (int i = 0; i < 3; i++)
+    {
+        std::cout << prices[i] << "\n";
+    }
+}
+```
+# Sizeof:
+```cpp
+#include <iostream>
+
+int main()
+{   
+    double gpa = 2.5;
+    std::string name = "bro";
+    char note = 'A';
+    bool graduated = true;
+    char letters[] = {'A','B','C','D','E','F'};
+    //Size of tells the size of the data:
+    std::cout << sizeof(gpa) << " bytes \n";
+
+    //Strings are always 32, because they're pointers
+    std::cout << sizeof(name) << " bytes \n";
+
+
+    std::cout << sizeof(note) << " byte \n";
+    std::cout << sizeof(graduated) << " byte \n";
+    
+    std::cout << sizeof(letters) << " bytes\n";
+    //We can use this to get the size of an array, (in elements): 
+    std::cout << sizeof(letters)/sizeof(char) << " elements\n";
+}
+
+```
+# Iteration over an array:
+```cpp
+#include <iostream>
+
+int main()
+{   
+    std::string students [] = {"Spongebob", "Patrick", "Squidward"};
+
+    //A way of iterating over an array is with size of and the calculation
+    for(int i = 0; i < sizeof(students)/sizeof(std::string); i++){
+        std::cout << students[i] << "\n";
+    }
+    //Tho we can use a simpler structure, called foreach, it's slower but simpler so you don't really care. Also is less flexible
+    for(std::string student: students){
+        std::cout << student << "\n";
+    }
+}
+```
