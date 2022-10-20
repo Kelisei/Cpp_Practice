@@ -523,8 +523,6 @@ int main()
 # Functions:
 ```cpp
 #include <iostream>
-#include <ctime>
-
 void happyBirthday(){
     for (int i = 0; i < 50; i++)
     {
@@ -538,8 +536,6 @@ int main()
 ```
 ```cpp
 #include <iostream>
-#include <ctime>
-
 void happyBirthday();
 int main()
 {
@@ -554,8 +550,6 @@ void happyBirthday(){
 ```
 ```cpp
 #include <iostream>
-#include <ctime>
-
 void happyBirthday(std::string name);
 int main()
 {
@@ -570,8 +564,6 @@ void happyBirthday(std::string name){
 ```
 ```cpp
 #include <iostream>
-#include <ctime>
-
 int mul(int x, int y);
 int main()
 {
